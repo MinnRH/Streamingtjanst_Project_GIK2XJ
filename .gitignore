@@ -424,5 +424,21 @@ FodyWeavers.xsd
 *.msm
 *.msp
 
+# Visual Studio cache och temporära filer
+.vs/
+
+## ==========================================
+## JetBrains Rider (.idea)
+## ==========================================
+# Ignorera JetBrains Rider-specifika projektinställningar
+.idea/
+*.sln.iml
+
+# Undantag: Om du vill dela Rider-ordlistor eller kodstil med teamet, 
+# kan du av-ignorera dem genom att ta bort '#' från raderna nedan:
+#!.idea/icon.png
+#!.idea/dictionaries/
+#!.idea/codeStyles/
+
 # Official VS Code C# Dev Kit Extension exclusion
 #*.lscache
