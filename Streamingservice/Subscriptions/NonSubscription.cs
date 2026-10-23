@@ -1,6 +1,3 @@
 namespace Streamingservice;
 
-public class NonSubscription
-{
-    
-}
+public class NonSubscription { }
