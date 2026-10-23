@@ -1,6 +1,6 @@
 namespace Streamingservice;
 
-public class SubscriptionFactory
+public interface ISubscription
 {
     
 }
