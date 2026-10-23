@@ -1,6 +1,7 @@
 namespace Streamingservice;
 
-public class BasicSubscriptionFactory
+public class BasicSubscriptionFactory :  SubscriptionFactory
 {
-    
+    public string SubscriptionLevel => "Basic";
+    public override ISubscription CreateSubscription() => new Subscription(SubscriptionLevel);
 }
