@@ -1,0 +1,26 @@
+@using Streamingservice
+@using Streamingservice.SubscriptionDecorators
+@model ISubscription
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Subscription Details</h2>
+    <body>
+    <p>Your current subscription: @Model.SubscriptionLevel </p>
+    <p>You have access to:</p>
+    <ul>
+        <li>Watch @Model.NumberOfStreams streams at the same time! </li>
+        <li>Watch content in @Model.VideoQuality quality!</li>
+         @if (@Model is ExclusiveContentDecorator)
+             {
+                 <li>✅Watch our exclusive content! </li>
+             }
+         else
+         {
+             <li>❌No exclusive content (yet...)</li>
+         }
+        
+    </ul>
+</body>
