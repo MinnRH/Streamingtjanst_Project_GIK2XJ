@@ -1,8 +1,12 @@
-@model TModel
 
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
 }
 
-<h2>title</h2>
+<h2>Choose your subscription</h2>
+<body>
+    <a asp-controller="SubscriptionSelection" asp-action="SelectSubscription" asp-route-selection="Basic">Basic</a>
+    <a asp-controller="SubscriptionSelection" asp-action="SelectSubscription" asp-route-selection="Standard">Standard</a>
+    <a asp-controller="SubscriptionSelection" asp-action="SelectSubscription" asp-route-selection="Premium">Premium</a>
+</body>

@@ -1,6 +1,15 @@
+using System.Collections.Generic;
 namespace Streamingservice.Users;
 
-public class UserDataBase
+public static class UserDataBase
 {
-    public List<User> Users { get; set; }
+    public static List<User> Users = new List<User>
+    {
+        new ConcreteUser
+        {
+           UserEmail = "123@abc",
+           WatchedContentIds = new HashSet<int>(),
+           UserSubscriptionLevel = new NonSubscription()
+        }
+    };
 }

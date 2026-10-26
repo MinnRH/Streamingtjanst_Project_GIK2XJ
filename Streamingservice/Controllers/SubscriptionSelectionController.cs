@@ -5,7 +5,7 @@ using Streamingservice.Users;
 
 namespace Streamingservice.Controllers;
 
-public class SubscriptionsSelectionController : Controller 
+public class SubscriptionSelectionController : Controller 
 {
     public IActionResult Index()
     {
