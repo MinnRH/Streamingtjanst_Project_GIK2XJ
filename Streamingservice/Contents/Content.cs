@@ -1,4 +1,4 @@
-﻿namespace Streamingservice.Content
+﻿namespace Streamingservice.Contents
 {
     public abstract class Content
     {

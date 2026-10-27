@@ -29,7 +29,5 @@ public class SubscriptionSelectionController : Controller
         }
         
         return View("SubscriptionDetails", subscription);
-    }
- 
-    
+    }  
 }

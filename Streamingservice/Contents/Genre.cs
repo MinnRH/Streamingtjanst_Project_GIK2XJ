@@ -1,10 +1,10 @@
-﻿namespace Streamingservice.Content
+﻿namespace Streamingservice.Contents
 {
     public enum Genre
     {
         Action,
         Comedy,
-        Documentery,
+        Documentary,
         Drama,
         Fantasy,  
         Horror,
