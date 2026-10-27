@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Streamingservice.Models;
 using System.Diagnostics;
+using System.Linq;
+
 using Streamingservice.Users;
 
 namespace Streamingservice.Controllers;
@@ -14,6 +16,8 @@ public class SubscriptionSelectionController : Controller
     
     public IActionResult SelectSubscription(string selection)
     {
+        string currentUserEmail = "123@abc"; // Hårdkodad email för befintlig användare.
+        
         SubscriptionFactory factory = selection switch
         {
             "Basic" => new BasicSubscriptionFactory(),
@@ -22,10 +26,12 @@ public class SubscriptionSelectionController : Controller
         };
 
         ISubscription subscription = factory.CreateSubscription();
-
-        foreach (User user in UserDataBase.Users )
+        
+        User currentUser = UserDataBase.Users.FirstOrDefault(user => user.UserEmail == currentUserEmail);
+        
+        if (currentUser != null)
         {
-           user.SetUserSubscriptionLevel(subscription);
+            currentUser.SetUserSubscriptionLevel(subscription);
         }
         
         return View("SubscriptionDetails", subscription);
