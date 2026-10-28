@@ -30,7 +30,36 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="SubscriptionSelection" asp-action="Index">Subscription</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="ContentSorterSelection" asp-action="Library">Library</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ContentSorterSelection" asp-action="ShowLibrary">Library</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ContentSorterSelection" asp-action="ShowByType" asp-route-selectedType="Movie">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ContentSorterSelection" asp-action="ShowByType" asp-route-selectedType="Series">Series</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ContentSorterSelection" asp-action="ShowRecommendation">Recommendations</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ContentSorterSelection" asp-action="ShowWatchHistory">Watch History</a>
+                        </li>
+                        <li class="nav-item">
+                            <form asp-controller="ContentSorterSelection" asp-action="ShowGenre" method="get">
+                                <select name="selectedGenre" class="nav-link text-dark" onchange=";this.form.requestSubmit()">
+                                    <option value="" disabled selected hidden>Genre</option>
+                                    <option value="Action">Action</option>
+                                    <option value="Comedy">Comedy</option>
+                                    <option value="Documentary">Documentary</option>
+                                    <option value="Drama">Drama</option>
+                                    <option value="Fantasy">Fantasy</option>
+                                    <option value="Horror">Horror</option>
+                                    <option value="Romance">Romance</option>
+                                    <option value="ScienceFiction">Science Fiction</option>
+                                    <option value="Thriller">Thriller</option>
+                                </select>
+                            </form>
                         </li>
                     </ul>
                 </div>

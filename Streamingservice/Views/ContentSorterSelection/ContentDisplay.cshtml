@@ -5,9 +5,10 @@
 @{
     ViewBag.Title = "title";
     Layout = "_Layout";
+
 }
 
-<h2>Library</h2>
+<h2>@ViewBag.Label</h2>
 <body>
     <ul>
         @foreach (Content content in @Model)

@@ -10,34 +10,34 @@ public static class ContentSorter
             .ToList();
             return sortedByTitleList;
         }
-        public static List<Content> SortContentByGenre(List<Content> unsortedContentList, Genre genre)
+        public static List<Content> SortContentByGenre(List<Content> unsortedContentList, Genre selectedGenre)
         {      
             List<Content> sortedByGenreList = unsortedContentList
-            .Where(content => content.Genre == genre)
+            .Where(content => content.Genre == selectedGenre)
             .OrderBy(content => content.Title)
             .ToList();
             return sortedByGenreList;
         }
-        public static List<Content> SortContentByRecommendation(List<Content> unsortedContentList, Genre genre, User user)
+        public static List<Content> SortContentByRecommendation(List<Content> unsortedContentList, Genre selectedGenre, User currentUser)
         {
             List<Content> sortedByRecommendationList = unsortedContentList
-            .Where(content => content.Genre == genre && !user.WatchedContentIds.Contains(content.Id))  
+            .Where(content => content.Genre == selectedGenre && !currentUser.WatchedContentIds.Contains(content.Id))  
             .OrderBy(content => content.Title)
             .ToList();
             return sortedByRecommendationList;
         }
-        public static List<Content> SortContentByWatchHistory(List<Content> unsortedContentList, Genre genre, User user)
+        public static List<Content> SortContentByWatchHistory(List<Content> unsortedContentList, User currentUser)
         {
             List<Content> sortedByWatchHistoryList = unsortedContentList
-            .Where(content => user.WatchedContentIds.Contains(content.Id))
+            .Where(content => currentUser.WatchedContentIds.Contains(content.Id))
             .OrderBy(content => content.Title)
             .ToList();
             return sortedByWatchHistoryList;
         }
-        public static List<Content> SortContentByType(List<Content> unsortedContentList, Content contentChoice)
+        public static List<Content> SortContentByType(List<Content> unsortedContentList, string selectedType)
         {
             List<Content> sortedByTypeList = unsortedContentList
-            .Where(content => content.GetType() == contentChoice.GetType())
+            .Where(content => content.GetType().Name == selectedType)
             .OrderBy(content => content.Title)
             .ToList();
             return sortedByTypeList;
