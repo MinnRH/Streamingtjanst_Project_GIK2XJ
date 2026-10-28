@@ -1,8 +1,8 @@
 ﻿namespace Streamingservice.Contents
 {
-    public class ContentDataBase
+    public static class ContentDataBase
     {
-        public List<Content> ContentList { get; set; } = new List<Content>
+        public static List<Content> ContentList { get; set; } = new List<Content>
         {
             new Movie
             {

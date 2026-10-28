@@ -1,0 +1,18 @@
+﻿@using Streamingservice
+@using Streamingservice.Contents
+
+@model List<Content>
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Library</h2>
+<body>
+    <ul>
+        @foreach (Content content in @Model)
+        {
+            <li>@content.Title</li>
+        }
+    </ul>
+</body>

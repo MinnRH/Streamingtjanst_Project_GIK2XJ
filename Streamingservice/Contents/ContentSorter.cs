@@ -1,16 +1,16 @@
 ﻿using Streamingservice.Users;
 namespace Streamingservice.Contents
 {
-public class ContentSorter
+public static class ContentSorter
     {
-        public List<Content> SortContentByTitle(List<Content> unsortedContentList)
+        public static List<Content> SortContentByTitle(List<Content> unsortedContentList)
         {
             List<Content> sortedByTitleList = unsortedContentList
             .OrderBy(content => content.Title)
             .ToList();
             return sortedByTitleList;
         }
-        public List<Content> SortContentByGenre(List<Content> unsortedContentList, Genre genre)
+        public static List<Content> SortContentByGenre(List<Content> unsortedContentList, Genre genre)
         {      
             List<Content> sortedByGenreList = unsortedContentList
             .Where(content => content.Genre == genre)
@@ -18,7 +18,7 @@ public class ContentSorter
             .ToList();
             return sortedByGenreList;
         }
-        public List<Content> SortContentByRecommendation(List<Content> unsortedContentList, Genre genre, User user)
+        public static List<Content> SortContentByRecommendation(List<Content> unsortedContentList, Genre genre, User user)
         {
             List<Content> sortedByRecommendationList = unsortedContentList
             .Where(content => content.Genre == genre && !user.WatchedContentIds.Contains(content.Id))  
@@ -26,7 +26,7 @@ public class ContentSorter
             .ToList();
             return sortedByRecommendationList;
         }
-        public List<Content> SortContentByWatchHistory(List<Content> unsortedContentList, Genre genre, User user)
+        public static List<Content> SortContentByWatchHistory(List<Content> unsortedContentList, Genre genre, User user)
         {
             List<Content> sortedByWatchHistoryList = unsortedContentList
             .Where(content => user.WatchedContentIds.Contains(content.Id))
@@ -34,7 +34,7 @@ public class ContentSorter
             .ToList();
             return sortedByWatchHistoryList;
         }
-        public List<Content> SortContentByType(List<Content> unsortedContentList, Content contentChoice)
+        public static List<Content> SortContentByType(List<Content> unsortedContentList, Content contentChoice)
         {
             List<Content> sortedByTypeList = unsortedContentList
             .Where(content => content.GetType() == contentChoice.GetType())
