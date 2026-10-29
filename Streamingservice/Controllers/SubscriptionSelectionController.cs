@@ -16,7 +16,7 @@ public class SubscriptionSelectionController : Controller
     
     public IActionResult SelectSubscription(string selection)
     {
-        string currentUserEmail = "123@abc"; // Hårdkodad email för befintlig användare.
+        
         
         SubscriptionFactory factory = selection switch
         {
@@ -28,7 +28,7 @@ public class SubscriptionSelectionController : Controller
         ISubscription subscription = factory.CreateSubscription();
         
         User currentUser = UserDataBase.Users
-        .FirstOrDefault(user => user.UserEmail == currentUserEmail);
+        .FirstOrDefault(user => user.UserEmail == UserDataBase.currentUserEmail);
         
         if (currentUser != null)
         {

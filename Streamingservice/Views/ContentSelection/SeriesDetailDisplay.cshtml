@@ -1,0 +1,44 @@
+﻿@using Streamingservice
+@using Streamingservice.Contents
+
+
+@model Series
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>@Model.Title</h2>
+
+<body><br />
+    <p>Number of seasons: @Model.Seasons.Count</p>
+    <h5>Description</h5>
+    <p>@Model.Description</p><br />
+
+    <p><b>Genre:</b> @Model.Genre</p><br />
+    @if (Model.IsExclusive)
+        {
+            <p>This series is EXCLUSIVE💎✨</p>                
+        }
+    <br />
+    @foreach (Season season in Model.Seasons)
+    {
+         <h6>Season @season.SeasonNumber</h6>  
+         <ul class="list-unstyled">
+            @foreach (Episode episode in season.Episodes)
+            {
+                <li>
+                    <div class="container bg-secondary-subtle rounded">
+                        <button class="btn btn-warning mt-2" disabled="@(!ViewBag.hasAccess)">
+                            <a asp-controller="PlayContentSelection" asp-action="PlayContent" asp-route-selectedContentId="@Model.Id">Play</a>
+                        </button>
+                        <p>
+                            @episode.EpisodeNumber @episode.EpisodeTitle <br /> Play time: @episode.PlayTime minutes
+                        </p>
+                    </div>
+                </li>
+            }
+            </ul>
+        }
+</body>

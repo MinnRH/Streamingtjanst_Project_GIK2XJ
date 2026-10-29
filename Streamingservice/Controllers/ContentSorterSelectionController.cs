@@ -21,7 +21,9 @@ namespace Streamingservice.Controllers
         }
         public IActionResult ShowRecommendation()
         {
-            User currentUser = UserDataBase.Users[0]; //Hårdkodad för att vi endast har en användare
+            User currentUser = UserDataBase.Users
+            .FirstOrDefault(user => user.UserEmail == UserDataBase.currentUserEmail);
+
             Genre selectedGenre = Genre.Action; //<- ändra när RecommendationCalculator är på plats
             List<Content> sortedContentList = ContentSorter.SortContentByRecommendation(ContentDataBase.ContentList, selectedGenre, currentUser);
             ViewBag.Label = "Recommendations";
@@ -29,7 +31,9 @@ namespace Streamingservice.Controllers
         }
         public IActionResult ShowWatchHistory()
         {
-            User currentUser = UserDataBase.Users[0]; //Hårdkodad för att vi endast har en användare
+            User currentUser = UserDataBase.Users
+            .FirstOrDefault(user => user.UserEmail == UserDataBase.currentUserEmail);
+
             List<Content> sortedContentList = ContentSorter.SortContentByWatchHistory(ContentDataBase.ContentList, currentUser);
             ViewBag.Label = "Watch History";
             return View("ContentDisplay", sortedContentList);
