@@ -22,9 +22,10 @@ namespace Streamingservice.Controllers
         public IActionResult ShowRecommendation()
         {
             User currentUser = UserDataBase.Users
-            .FirstOrDefault(user => user.UserEmail == UserDataBase.currentUserEmail);
+            .FirstOrDefault(user => user.UserEmail == UserDataBase.currentUser.UserEmail);
 
-            Genre selectedGenre = Genre.Action; //<- ändra när RecommendationCalculator är på plats
+            Genre selectedGenre = RecommendationCalculator.CalculateRecommendations(currentUser.RecentlyWatched);
+
             List<Content> sortedContentList = ContentSorter.SortContentByRecommendation(ContentDataBase.ContentList, selectedGenre, currentUser);
             ViewBag.Label = "Recommendations";
             return View("ContentDisplay", sortedContentList);
@@ -32,7 +33,7 @@ namespace Streamingservice.Controllers
         public IActionResult ShowWatchHistory()
         {
             User currentUser = UserDataBase.Users
-            .FirstOrDefault(user => user.UserEmail == UserDataBase.currentUserEmail);
+            .FirstOrDefault(user => user.UserEmail == UserDataBase.currentUser.UserEmail);
 
             List<Content> sortedContentList = ContentSorter.SortContentByWatchHistory(ContentDataBase.ContentList, currentUser);
             ViewBag.Label = "Watch History";

@@ -1,0 +1,13 @@
+﻿@using Streamingservice
+@using Streamingservice.Contents
+
+
+@model Content
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Now playing: @Model.Title 📽️</h2><br />
+<p>Playing in @ViewBag.User.UserSubscriptionLevel.VideoQuality quality.</p>

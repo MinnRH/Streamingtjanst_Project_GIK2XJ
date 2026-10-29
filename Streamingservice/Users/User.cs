@@ -1,14 +1,20 @@
+using Streamingservice.Contents;
+using Streamingservice.ObserverPatternInterfaces;
+using System;
+
 namespace Streamingservice.Users;
 
-public abstract class User
+public abstract class User : IPlayObserver
 {
     public string UserEmail { get; set; }
     public HashSet<int> WatchedContentIds { get; set; }
+    public CircularBuffer<Genre> RecentlyWatched { get; set; }
     public ISubscription UserSubscriptionLevel { get; set; }
 
-    public virtual void Update()
+    public virtual void Update(int contentId, Genre genre)
     {
-        //Kod här
+        WatchedContentIds.Add(contentId);
+        RecentlyWatched.Add(genre);
     }
 
     public void SetUserSubscriptionLevel(ISubscription subscription)

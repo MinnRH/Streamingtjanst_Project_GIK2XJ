@@ -28,7 +28,7 @@ public class SubscriptionSelectionController : Controller
         ISubscription subscription = factory.CreateSubscription();
         
         User currentUser = UserDataBase.Users
-        .FirstOrDefault(user => user.UserEmail == UserDataBase.currentUserEmail);
+        .FirstOrDefault(user => user.UserEmail == UserDataBase.currentUser.UserEmail);
         
         if (currentUser != null)
         {

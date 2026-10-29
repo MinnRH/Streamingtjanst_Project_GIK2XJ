@@ -14,7 +14,7 @@ namespace Streamingservice.Controllers
             if (selectedContent == null) { return NotFound(); }
 
             User currentUser = UserDataBase.Users
-            .FirstOrDefault(user => user.UserEmail == UserDataBase.currentUserEmail);
+            .FirstOrDefault(user => user.UserEmail == UserDataBase.currentUser.UserEmail);
             ViewBag.hasAccess = AccessControlService.CheckContentAccess(selectedContent, currentUser);
 
             if (selectedContent is Movie) { return View("MovieDetailDisplay", selectedContent); }
