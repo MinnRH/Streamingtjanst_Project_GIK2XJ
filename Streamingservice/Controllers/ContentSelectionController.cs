@@ -1,15 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Streamingservice.Contents;
-using Streamingservice.Users;
 
 
 namespace Streamingservice.Controllers
 {
-    internal class ContentSelectionController : Controller
+    public class ContentSelectionController : Controller
     {
-        public IActionResult SelectContent (Content selectedContent)
+        public IActionResult SelectContent (int selectedContentId)
         {
-            return View();
+            Content selectedContent = ContentDataBase.ContentList
+            .FirstOrDefault(content => content.Id == selectedContentId);
+            if (selectedContent == null) { return NotFound(); }
+
+            if (selectedContent is Movie) { return View("MovieDetailDisplay", selectedContent); }
+            else { return View("SeriesDetailDisplay", selectedContent); }
         }
     }
 }

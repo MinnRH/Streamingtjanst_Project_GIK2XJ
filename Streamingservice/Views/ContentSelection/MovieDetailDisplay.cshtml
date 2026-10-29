@@ -1,0 +1,24 @@
+﻿@using Streamingservice
+@using Streamingservice.Contents
+
+
+@model Movie
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>@Model.Title <a class="btn btn-primary" asp-controller="PlayContentSelection" asp-action="PlayContent" asp-route-selectedContent="@Model">Play</a></h2>
+
+<body><br />
+<h5>Description</h5>
+<p>@Model.Description</p><br />
+
+    <p><b>Playtime:</b> @Model.PlayTime minutes</p>
+    <p><b>Genre:</b> @Model.Genre</p>
+    @if (Model.IsExclusive)
+        {
+            <p>This movie is EXCLUSIVE💎✨</p>                
+        }
+</body>
