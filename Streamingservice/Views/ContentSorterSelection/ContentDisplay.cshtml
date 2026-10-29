@@ -13,7 +13,9 @@
     <ul>
         @foreach (Content content in @Model)
         {
-            <li>@content.Title</li>
+            <li>
+            <a asp-controller="ContentSelection" asp-action="SelectContent" asp-route-selectedContent="@content">@content.Title</a>
+            </li>
         }
     </ul>
 </body>
