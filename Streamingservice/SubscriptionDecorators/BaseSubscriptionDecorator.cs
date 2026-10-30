@@ -8,4 +8,5 @@ public abstract class BaseSubscriptionDecorator(ISubscription subscription) : IS
     public virtual string SubscriptionLevel => _baseSubscription.SubscriptionLevel;
     public virtual string VideoQuality => _baseSubscription.VideoQuality;
     public virtual int NumberOfStreams =>  _baseSubscription.NumberOfStreams;
+    public virtual int Price => _baseSubscription.Price;
 }
