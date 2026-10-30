@@ -5,8 +5,65 @@
 }
 
 <h2>Choose your subscription</h2>
+<br />
 <body>
-    <a asp-controller="SubscriptionSelection" asp-action="SelectSubscription" asp-route-selection="Basic">Basic</a>
-    <a asp-controller="SubscriptionSelection" asp-action="SelectSubscription" asp-route-selection="Standard">Standard</a>
-    <a asp-controller="SubscriptionSelection" asp-action="SelectSubscription" asp-route-selection="Premium">Premium</a>
+    <div class="row">
+        <div class="col-md-4 ">
+            <a class="btn btn-light text-start w-100 h-100 border" asp-controller="SubscriptionSelection" asp-action="SelectSubscription" asp-route-selection="Basic">
+                <h4>Basic</h4>
+                <ul>
+                    <li>
+                        Access to our non-exclusive selection of movies and series
+                    </li>
+                    <li>
+                        Streaming in HD-Quality
+                    </li>
+                    <li>
+                        Access to one stream
+                    </li>
+                    <li>
+                        89 SEK per month
+                    </li>
+                </ul>
+            </a>
+        </div>
+        <div class="col-md-4 ">
+            <a class="btn btn-light text-start w-100 h-100 border"asp-controller="SubscriptionSelection" asp-action="SelectSubscription" asp-route-selection="Standard">
+                 <h4>Standard</h4>
+                 <ul>
+                    <li>
+                        Access to our non-exclusive selection of movies and series
+                    </li>
+                    <li>
+                        Streaming in FHD-Quality
+                    </li>
+                    <li>
+                        Access to two streams
+                    </li>
+                    <li>
+                        119 SEK per month
+                    </li>
+                </ul>
+            </a>
+        </div>   
+        <div class="col-md-4">
+            <a class="btn btn-light text-start w-100 h-100 border" asp-controller="SubscriptionSelection" asp-action="SelectSubscription" asp-route-selection="Premium">
+                <h4>Premium</h4>
+                <ul>
+                    <li>
+                        Access to our exclusive selection of movies and series
+                    </li>
+                    <li>
+                        Streaming in UHD-Quality
+                    </li>
+                    <li>
+                        Access to three streams
+                    </li>
+                    <li>
+                        169 SEK per month
+                    </li>
+                </ul>
+            </a>
+        </div>
+    </div>
 </body>
