@@ -31,7 +31,7 @@
                 <li>
                     <div class="container bg-secondary-subtle rounded">
                         <button class="btn btn-warning mt-2" disabled="@(!ViewBag.hasAccess)">
-                            <a asp-controller="PlayContentSelection" asp-action="PlayContent" asp-route-selectedContentId="@Model.Id">Play</a>
+                            <a class="text-decoration-none fw-bold text-dark" asp-controller="PlayContentSelection" asp-action="PlayContent" asp-route-selectedContentId="@Model.Id">Play</a>
                         </button>
                         <p>
                             @episode.EpisodeNumber @episode.EpisodeTitle <br /> Play time: @episode.PlayTime minutes

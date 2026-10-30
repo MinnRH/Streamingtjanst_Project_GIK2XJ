@@ -27,7 +27,13 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="SubscriptionSelection" asp-action="Index">Subscription</a>
+                            <form asp-controller="SubscriptionSelection" asp-action="SubscriptionViewSelection" method="get">
+                                <select name="selectedAction"class="nav-link text-dark" onchange=";this.form.requestSubmit()">
+                                    <option value="" disabled selected hidden>Subscriptions</option>
+                                    <option value="ChangeSubscription">Change your subscription</option>
+                                    <option value="ViewSubscription">View your subscription</option>
+                                </select>
+                            </form>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="ContentSorterSelection" asp-action="ShowLibrary">Library</a>
