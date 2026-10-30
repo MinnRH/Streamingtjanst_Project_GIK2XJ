@@ -30,13 +30,16 @@
     }
 </style>
 
-<h2>@ViewBag.Label</h2>
+<h2>@ViewBag.Label@(Model.FirstOrDefault() is Movie ? "s" : "")</h2>
 <body>
     <ul class="list">
         @foreach (Content content in @Model)
         {
             <li>
-            <a asp-controller="ContentSelection" asp-action="SelectContent" asp-route-selectedContentId="@content.Id">@content.Title</a>
+                <a asp-controller="ContentSelection" asp-action="SelectContent" asp-route-selectedContentId="@content.Id">
+                    @content.Title
+                    @(content.IsExclusive == true ? "☆" : "")
+                </a>
             </li>
         }
     </ul>
