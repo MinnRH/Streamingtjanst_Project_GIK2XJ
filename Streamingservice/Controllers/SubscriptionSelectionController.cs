@@ -9,9 +9,27 @@ namespace Streamingservice.Controllers;
 
 public class SubscriptionSelectionController : Controller 
 {
-    public IActionResult Index()
+    public IActionResult SubscriptionViewSelection(string selectedAction)
     {
-        return View();
+
+        if (selectedAction == "ChangeSubscription")
+        {
+            return View("Index");
+        }
+        else if (selectedAction == "ViewSubscription")
+        {
+
+            User currentUser = UserDataBase.Users
+            .FirstOrDefault(user => user.UserEmail == UserDataBase.currentUser.UserEmail);
+
+            ISubscription subscription = currentUser.UserSubscriptionLevel;
+
+            return View("SubscriptionDetails", subscription);
+        }
+        else
+        {
+            return NotFound();
+        }
     }
     
     public IActionResult SelectSubscription(string selection)
