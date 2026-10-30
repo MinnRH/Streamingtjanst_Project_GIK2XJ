@@ -306,6 +306,258 @@
                 Genre = Genre.Comedy,
                 IsExclusive = true,
                 PlayTime = 104
+            },
+            new Movie
+            {
+                Id = 23,
+                Title = "Dennis Protocol",
+                Description = "In a rain-slicked metropolis ruled by algorithms, a rogue rogue hacker uncovers a memory chip containing the consciousness of the city's founder.",
+                Genre = Genre.ScienceFiction,
+                IsExclusive = true,
+                PlayTime = 129
+            },
+            new Movie
+            {
+                Id = 24,
+                Title = "Love at Zero Felix",
+                Description = "A chronically motion-sick travel blogger and an eccentric wilderness instructor get stranded together at a remote mountain cabin.",
+                Genre = Genre.Romance,
+                IsExclusive = false,
+                PlayTime = 104
+            },
+            new Movie
+            {
+                Id = 25,
+                Title = "The Static Between Idas",
+                Description = "After moving into an isolated seaside radio tower, a late-night broadcaster begins hearing broadcasts from an alternative reality—and something is listening back.",
+                Genre = Genre.Horror,
+                IsExclusive = true,
+                PlayTime = 112
+            },
+            new Movie
+            {
+                Id = 26,
+                Title = "Jonas syndicate",
+                Description = "A retired master locksmith is dragged into one final job: breaching an impenetrable vault beneath a high-stakes Casino in Monaco.",
+                Genre = Genre.Thriller,
+                IsExclusive = false,
+                PlayTime = 141
+            },
+            new Movie
+            {
+                Id = 27,
+                Title = "Ash & Minna",
+                Description = "Decades after the sun was obscured by volcanic haze, a lone scavenger protects a young girl who holds the coordinates to the last sunlit valley.",
+                Genre = Genre.ScienceFiction,
+                IsExclusive = false,
+                PlayTime = 135
+            },
+            new Movie
+            {
+                Id = 28,
+                Title = "The Silent Dennis",
+                Description = "Investigating a series of strange disappearances in a secluded mountain town, a local detective uncovers an ancient entity that feeds on secrets.",
+                Genre = Genre.Horror,
+                IsExclusive = true,
+                PlayTime = 105
+            },
+            new Movie
+            {
+                Id = 29,
+                Title = "Accidental Heist",
+                Description = "Two hopelessly incompetent moving guys mistakenly drive off with a museum's priceless artifact, sparking a chaotic state-wide police chase.",
+                Genre = Genre.Comedy,
+                IsExclusive = false,
+                PlayTime = 98
+            },
+            new Movie
+            {
+                Id = 30,
+                Title = "Vanguard: Final Jonas",
+                Description = "A disgraced operative is forced out of hiding to intercept a stolen orbital weapon before a rogue syndicate triggers global devastation.",
+                Genre = Genre.Action,
+                IsExclusive = false,
+                PlayTime = 132
+            },
+            new Movie
+            {
+                Id = 31,
+                Title = "Echoes of Ida",
+                Description = "When a deep-space communications officer receives a SOS from an unmapped planet, she discovers a forgotten Ida-colony harboring a lethal cosmic secret.",
+                Genre = Genre.ScienceFiction,
+                IsExclusive = true,
+                PlayTime = 124
+            },
+            new Movie
+            {
+                Id = 32,
+                Title = "Dennis & Jonas: Professional Amateurs",
+                Description = "Tasked with house-sitting a billionaire's mansion, Dennis and Jonas accidentally launch the security system's auto-destruct protocol while trying to fix the toaster.",
+                Genre = Genre.Comedy,
+                IsExclusive = false,
+                PlayTime = 96
+            },
+            new Movie
+            {
+                Id = 33,
+                Title = "Felix and the Quantum Glitch",
+                Description = "Felix tries to debug a simple homework script, but accidentally tears a hole in spacetime, trapping himself in a dimension made entirely of uncompiled C# code.",
+                Genre = Genre.ScienceFiction,
+                IsExclusive = true,
+                PlayTime = 115
+            },
+            new Movie
+            {
+                Id = 34,
+                Title = "Minna's Missing Mug",
+                Description = "When Minna's favorite coffee mug vanishes from the office breakroom, she turns into a hard-boiled detective launching an aggressive, city-wide manhunt.",
+                Genre = Genre.Drama,
+                IsExclusive = false,
+                PlayTime = 102
+            },
+            new Movie
+            {
+                Id = 35,
+                Title = "Ida's Ultimatum",
+                Description = "Running on three energy drinks and sheer willpower, Ida takes on an entire corporate board of directors in a high-stakes negotiation battle to save the world's last Wi-Fi router.",
+                Genre = Genre.Action,
+                IsExclusive = true,
+                PlayTime = 120
+            },
+            new Movie
+            {
+                Id = 36,
+                Title = "The Roadtrip Disaster",
+                Description = "Dennis, Jonas, Felix, Minna and Ida pile into a tiny hatchback for a weekend getaway, only to take a 'shortcut' that leads them straight into a secret military testing zone.",
+                Genre = Genre.Comedy,
+                IsExclusive = false,
+                PlayTime = 110
+            },
+            new Movie
+            {
+                Id = 37,
+                Title = "The Morning After Borlänge",
+                Description = "After a wild celebration, Jonas, Felix, Minna, and Ida wake up in a wrecked hotel room with no memory of the night, a loose alpaca in the bathroom, and Dennis completely missing.",
+                Genre = Genre.Comedy,
+                IsExclusive = true,
+                PlayTime = 108
+            },
+            new Movie
+            {
+                Id = 38,
+                Title = "Jonas & Dennis: Master Chefs",
+                Description = "Determined to win a Michelin star, Jonas and Dennis open a underground gourmet restaurant, serving raw instant noodles and calling it 'deconstructed fusion'.",
+                Genre = Genre.Comedy,
+                IsExclusive = false,
+                PlayTime = 92
+            },
+            new Movie
+            {
+                Id = 39,
+                Title = "Felix & Ida: Syntax Error",
+                Description = "When an AI server room locks Felix and Ida inside on a Friday night, they must hack their way through ten levels of digital traps before the automated laser grid resets.",
+                Genre = Genre.Action,
+                IsExclusive = true,
+                PlayTime = 114
+            },
+            new Movie
+            {
+                Id = 40,
+                Title = "Minna vs. The Haunted Printer",
+                Description = "When Minna buys a second-hand office printer that only prints cryptical warnings at 3 AM, she and Felix team up to perform an exorcism with an ethernet cable.",
+                Genre = Genre.Horror,
+                IsExclusive = false,
+                PlayTime = 101
+            },
+            new Movie
+            {
+                Id = 41,
+                Title = "The Great Exam Heist",
+                Description = "Faced with an impossible final test, Dennis, Jonas, Felix, Minna, and Ida execute an overly complex, Mission Impossible-style heist just to extend the deadline by 24 hours.",
+                Genre = Genre.Action,
+                IsExclusive = false,
+                PlayTime = 125
+            },
+            new Movie
+            {
+                Id = 42,
+                Title = "The Sword of Dennis",
+                Description = "When Dennis accidentally pulls an ancient glowing sword from a park bench, he and Jonas are thrust into a magical realm where Dennis is mistakingly crowned the High King.",
+                Genre = Genre.Fantasy,
+                IsExclusive = true,
+                PlayTime = 138
+            },
+            new Movie
+            {
+                Id = 43,
+                Title = "Minna & The Whispering Woods",
+                Description = "Deep inside an enchanted forest, Minna discovers a hidden sanctuary of mythical creatures—and must teach them modern project management to save their realm from destruction.",
+                Genre = Genre.Fantasy,
+                IsExclusive = false,
+                PlayTime = 126
+            },
+            new Movie
+            {
+                Id = 44,
+                Title = "Ida, Felix & The Mana Core",
+                Description = "In a floating city powered by magic, sorcerer Ida and alchemist Felix team up to stop a rogue guild from draining the city's power grid during finals week.",
+                Genre = Genre.Fantasy,
+                IsExclusive = false,
+                PlayTime = 119
+            },
+            new Movie
+            {
+                Id = 45,
+                Title = "Coffee, Code & Jonas",
+                Description = "Jonas falls head over heels for a mysterious developer who keeps leaving flirty comments in his GitHub pull requests, leading to a hunt across the city to find her.",
+                Genre = Genre.Romance,
+                IsExclusive = false,
+                PlayTime = 105
+            },
+            new Movie
+            {
+                Id = 46,
+                Title = "Ida's Matchmaking Mishap",
+                Description = "Self-proclaimed romance expert Ida tries to set up Dennis with his dream date, but her elaborate and chaotic schemes constantly pull Felix into the middle of the drama.",
+                Genre = Genre.Romance,
+                IsExclusive = true,
+                PlayTime = 98
+            },
+            new Movie
+            {
+                Id = 47,
+                Title = "Love in the Midnight Library",
+                Description = "Trapped in the university library after hours during a heavy snowstorm, Minna and Jonas start off as rival study partners and end up discovering something much deeper.",
+                Genre = Genre.Romance,
+                IsExclusive = false,
+                PlayTime = 112
+            },
+            new Movie
+            {
+                Id = 48,
+                Title = "The Borlänge Identity",
+                Description = "Waking up on a train with a bag full of cash and no memory, Felix must rely on frantic encrypted phone calls from Minna to outsmart a shadowy cartel following his every move.",
+                Genre = Genre.Thriller,
+                IsExclusive = true,
+                PlayTime = 130
+            },
+            new Movie
+            {
+                Id = 49,
+                Title = "Dennis Undercover",
+                Description = "Mistaken for an infamous international art thief, Dennis gets recruited by intelligence agents, forcing Jonas and Ida to act as his handlers before his cover gets blown.",
+                Genre = Genre.Thriller,
+                IsExclusive = false,
+                PlayTime = 122
+            },
+            new Movie
+            {
+                Id = 50,
+                Title = "Zero Day Protocol",
+                Description = "When Minna and Felix stumble upon a backdoor vulnerability in a mega-corporation's firewall, they trigger a deadly race against time to expose the conspiracy before they are erased.",
+                Genre = Genre.Thriller,
+                IsExclusive = true,
+                PlayTime = 117
             }
         };
     }
