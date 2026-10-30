@@ -3,9 +3,6 @@ namespace Streamingservice;
 public class BasicSubscriptionFactory :  SubscriptionFactory
 {
     public string SubscriptionLevel => "Basic";
-    public override ISubscription CreateSubscription() => new Subscription(SubscriptionLevel);
+    public int Price => 89;
+    public override ISubscription CreateSubscription() => new Subscription(SubscriptionLevel, Price);
 }
-
-//Hej :)
-
-// Jonas Säger också hej

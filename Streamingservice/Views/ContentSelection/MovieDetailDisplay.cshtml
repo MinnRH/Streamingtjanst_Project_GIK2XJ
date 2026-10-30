@@ -9,7 +9,8 @@
     Layout = "_Layout";
 }
 
-<h2>@Model.Title <button class="btn btn-warning" disabled="@(!ViewBag.hasAccess)"><a asp-controller="PlayContentSelection" asp-action="PlayContent" asp-route-selectedContentId="@Model.Id">Play</a></button></h2>
+
+<h2>@Model.Title <button button class="btn btn-warning" disabled="@(!ViewBag.hasAccess)"><a class="text-decoration-none fw-bold text-dark" asp-controller="PlayContentSelection" asp-action="PlayContent" asp-route-selectedContentId="@Model.Id">Play</a></button></h2>
 
 <body><br />
 <h5>Description</h5>
