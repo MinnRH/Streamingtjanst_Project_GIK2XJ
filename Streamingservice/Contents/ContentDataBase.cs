@@ -2,6 +2,7 @@
 {
     public static class ContentDataBase
     {
+        // Listan är statisk för att den ska vara tillgänglig över hela applikationen och inte behöva instansieras varje gång.
         public static List<Content> ContentList { get; set; } = new List<Content>
         {
             new Movie

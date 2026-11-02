@@ -20,6 +20,7 @@ public static class ContentSorter
         }
         public static List<Content> SortContentByRecommendation(List<Content> unsortedContentList, Genre selectedGenre, User currentUser)
         {
+            // Plockar bort innehåll som användaren redan har sett för att visa relevanta rekommendationer.
             List<Content> sortedByRecommendationList = unsortedContentList
             .Where(content => content.Genre == selectedGenre && !currentUser.WatchedContentIds.Contains(content.Id))  
             .OrderBy(content => content.Title)

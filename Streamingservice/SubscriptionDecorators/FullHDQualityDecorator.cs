@@ -2,6 +2,6 @@ namespace Streamingservice.SubscriptionDecorators;
 
 public class FullHDQualityDecorator(ISubscription subscription) : BaseSubscriptionDecorator(subscription)
 {
-    // För att få videokvaliten att returnera "FHD" med get metoden istället för "HD" skrivs den över. 
+    // Skriver över propertyn för att returnera "FHD" i stället för standardvärdet "HD". 
     public override string VideoQuality => "FHD";
 }

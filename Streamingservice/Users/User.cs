@@ -13,6 +13,7 @@ public abstract class User : IPlayObserver
 
     public virtual void Update(int contentId, Genre genre)
     {
+        // Uppdaterar visningshistoriken för att kunna visa upp och räkna rekommendationer med.
         WatchedContentIds.Add(contentId);
         RecentlyWatched.Add(genre);
     }

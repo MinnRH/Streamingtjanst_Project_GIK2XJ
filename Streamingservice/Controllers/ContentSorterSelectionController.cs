@@ -7,6 +7,7 @@ namespace Streamingservice.Controllers
 {
     public class ContentSorterSelectionController : Controller
     {
+        // ViewBag.Label används för att skriva ut en passande rubrik för varje vy som visar innehåll.
         public IActionResult ShowLibrary()
         {
             List<Content> sortedContentList = ContentSorter.SortContentByTitle(ContentDataBase.ContentList);

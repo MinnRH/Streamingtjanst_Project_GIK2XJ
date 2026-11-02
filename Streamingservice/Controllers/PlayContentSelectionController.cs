@@ -9,12 +9,13 @@ namespace Streamingservice.Controllers
     {
         public IActionResult PlayContent(int selectedContentId)
         {
+            // Skickar med en User i en ViewBag för att kunna visa rätt information i vyn.
             ViewBag.User = UserDataBase.Users.FirstOrDefault(user => user.UserEmail == UserDataBase.currentUser.UserEmail);
             Content selectedContent = ContentDataBase.ContentList.FirstOrDefault(content => content.Id == selectedContentId);
+            // Uppdaterar oberservatörer för att de ska se att ett innehåll har spelats upp.
             NotifyObservers(selectedContent.Id, selectedContent.Genre);
             return View("ContentPlayer", selectedContent);
         }
-
 
         public List<IPlayObserver> observers = new List<IPlayObserver>(){ UserDataBase.currentUser };
         public void AddObserver(IPlayObserver observer) 

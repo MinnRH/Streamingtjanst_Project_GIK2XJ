@@ -34,8 +34,6 @@ public class SubscriptionSelectionController : Controller
     
     public IActionResult SelectSubscription(string selection)
     {
-        
-        
         SubscriptionFactory factory = selection switch
         {
             "Basic" => new BasicSubscriptionFactory(),

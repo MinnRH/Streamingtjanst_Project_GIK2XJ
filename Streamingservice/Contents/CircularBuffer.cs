@@ -4,6 +4,7 @@
     {
         private readonly Queue<Genre> _queue = new Queue<Genre>(maxCapacity);
 
+        // Tar bort äldsta elementet om bufferten är full innan ett nytt element läggs till.
         public void Add (Genre genre)
         {
             if (_queue.Count >= maxCapacity)

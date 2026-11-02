@@ -30,6 +30,7 @@
             {
                 <li>
                     <div class="container bg-secondary-subtle rounded">
+                        <!-- Lägger knappar/länkar för att kunna spela upp varje avsnitt. -->
                         <button class="btn btn-warning mt-2" disabled="@(!ViewBag.hasAccess)">
                             <a class="text-decoration-none fw-bold text-dark" asp-controller="PlayContentSelection" asp-action="PlayContent" asp-route-selectedContentId="@Model.Id">Play</a>
                         </button>

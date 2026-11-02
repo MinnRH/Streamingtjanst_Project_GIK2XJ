@@ -38,6 +38,7 @@
             <li>
                 <a asp-controller="ContentSelection" asp-action="SelectContent" asp-route-selectedContentId="@content.Id">
                     @content.Title
+					<!-- Visar en stjärna för att tala om att innehållet är exklusivt. -->
                     @(content.IsExclusive == true ? "☆" : "")
                 </a>
             </li>

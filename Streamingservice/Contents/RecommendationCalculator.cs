@@ -11,13 +11,14 @@ namespace Streamingservice.Contents
             {
                 mostWatchedGenre = recentlyWatched
                 .GetQueue()
-                .GroupBy(genre => genre)
+                .GroupBy(genre => genre) // Grupperar genrer för att välja ut den med flest förekomster.
                 .OrderByDescending(group => group.Count())
                 .First()
-                .Key;
+                .Key; // Plockar ut värdet (genren) från den grupp som har flest förekomster.
             }
             else
             {
+                // Action är default genre för att säkerställa att det alltid finns en rekommendation.
                 mostWatchedGenre = Genre.Action;
             }
             

@@ -52,6 +52,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="ContentSorterSelection" asp-action="ShowWatchHistory">Watch History</a>
                         </li>
                         <li class="nav-item">
+                            <!-- Drop-down-lista som skickar med vald genre till ContentSorterSelection-controller. -->
                             <form asp-controller="ContentSorterSelection" asp-action="ShowGenre" method="get">
                                 <select name="selectedGenre" class="nav-link text-dark" onchange=";this.form.requestSubmit()">
                                     <option value="" disabled selected hidden>Genre</option>
